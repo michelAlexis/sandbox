@@ -13,8 +13,8 @@ export class NativeModuleComponent implements OnInit {
 
   @ViewChild('mapAnchor', { static: true }) private mapAnchor: ElementRef;
 
-  private mapView!: any;
-  private map!: any;
+  private mapView!: MapView;
+  private map!: Map;
 
   constructor() { }
 
