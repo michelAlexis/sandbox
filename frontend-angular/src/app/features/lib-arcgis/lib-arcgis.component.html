@@ -1,11 +1,7 @@
 <div>
-  <div class="test-container">
-    <h1>Import api using loader module</h1>
-    <app-lib-arcgis-loader-module></app-lib-arcgis-loader-module>
-  </div>
-
-  <div class="test-container">
-    <h1>Import api using native module</h1>
-    <app-lib-arcgis-native-module></app-lib-arcgis-native-module>
+  <button [routerLink]="'loader'">Loader</button>
+  <button [routerLink]="'native'">Native</button>
+  <div>
+    <router-outlet></router-outlet>
   </div>
 </div>
