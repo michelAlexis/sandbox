@@ -1,5 +1,11 @@
 <button (click)="addFeatureLayer()">Test add layer</button>
 <button (click)="moveToCenter()">Move to center</button>
+<button (click)="toggleBasemapGallery()">Add BaseMapGallery inside map</button>
+<button (click)="toggleSearch()">Toggle search</button>
+<button (click)="toggleLayerList()">Toggle layerList</button>
+<div #searchAnchor class="search-anchor"></div>
+
 <div class="map-container">
   <div #mapAnchor class="map-anchor"></div>
+  <div #layerListAnchor class="layer-list-anchor" *ngIf="showLayerList"></div>
 </div>
