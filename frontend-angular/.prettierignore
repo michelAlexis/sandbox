@@ -1,5 +1,4 @@
-#! Don't forget to copy new files to .prettierignore too
-
+#! COPY FORM GIT IGNORE
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
@@ -46,5 +45,3 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
-
-#! Don't forget to copy new files to .prettierignore too
