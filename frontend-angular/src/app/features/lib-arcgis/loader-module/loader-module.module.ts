@@ -4,12 +4,8 @@ import { RouterModule } from '@angular/router';
 import { LoaderModuleComponent } from './loader-module.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    RouterModule.forChild([
-    { path: '', component: LoaderModuleComponent },
-  ])],
+  imports: [CommonModule, RouterModule.forChild([{ path: '', component: LoaderModuleComponent }])],
   declarations: [LoaderModuleComponent],
-  bootstrap: [LoaderModuleComponent]
+  bootstrap: [LoaderModuleComponent],
 })
 export class LoaderModuleModule {}

@@ -8,9 +8,8 @@ describe('NativeModuleComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NativeModuleComponent ]
-    })
-    .compileComponents();
+      declarations: [NativeModuleComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

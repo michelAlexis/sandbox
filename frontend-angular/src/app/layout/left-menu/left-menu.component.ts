@@ -5,9 +5,8 @@ import { LayoutManager } from '../layout.manager';
   selector: 'app-left-menu',
   templateUrl: './left-menu.component.html',
   styleUrls: ['./left-menu.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LeftMenuComponent {
-
   constructor(public layoutManager: LayoutManager) {}
 }

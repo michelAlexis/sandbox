@@ -1,14 +1,9 @@
 <mat-toolbar color="primary">
-    <!-- Burger menu toggl -->
-    <button
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="layoutManager.toggleLeftMenu()"
-        *ngIf="layoutManager.isHandset$ | async">
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-    </button>
+  <!-- Burger menu toggl -->
+  <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="layoutManager.toggleLeftMenu()" *ngIf="layoutManager.isHandset$ | async">
+    <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+  </button>
 
-    <!-- App title -->
-    <span>Sandbox ami frontend</span>
+  <!-- App title -->
+  <span>Sandbox ami frontend</span>
 </mat-toolbar>

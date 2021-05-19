@@ -12,14 +12,8 @@ import { LayoutComponent } from './layout.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { LeftMenuComponent } from './left-menu/left-menu.component';
 
-
-
 @NgModule({
-  declarations: [
-    LayoutComponent,
-    TopBarComponent,
-    LeftMenuComponent,
-  ],
+  declarations: [LayoutComponent, TopBarComponent, LeftMenuComponent],
   imports: [
     // Angular
     CommonModule,
@@ -30,8 +24,8 @@ import { LeftMenuComponent } from './left-menu/left-menu.component';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
   ],
-  exports: [LayoutComponent]
+  exports: [LayoutComponent],
 })
-export class LayoutModule { }
+export class LayoutModule {}

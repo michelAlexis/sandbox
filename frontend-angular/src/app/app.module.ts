@@ -9,9 +9,7 @@ import { LayoutModule as AppLayoutModule } from './layout/layout.module';
 import { FeaturesModule } from './features/features.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
+  declarations: [AppComponent],
   imports: [
     // Angular
     BrowserModule,
@@ -24,6 +22,6 @@ import { FeaturesModule } from './features/features.module';
     FeaturesModule,
     AppLayoutModule,
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

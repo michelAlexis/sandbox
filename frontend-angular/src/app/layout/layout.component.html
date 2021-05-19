@@ -1,11 +1,14 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport
-      [attr.role]="(layoutManager.isHandset$ | async) ? 'dialog' : 'navigation'"
-      [mode]="(layoutManager.isHandset$ | async) ? 'over' : 'side'"
-      [opened]="(layoutManager.isHandset$ | async) === false">
-
-      <!-- Menu -->
-      <app-left-menu></app-left-menu>
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport
+    [attr.role]="(layoutManager.isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(layoutManager.isHandset$ | async) ? 'over' : 'side'"
+    [opened]="(layoutManager.isHandset$ | async) === false"
+  >
+    <!-- Menu -->
+    <app-left-menu></app-left-menu>
   </mat-sidenav>
 
   <mat-sidenav-content>
@@ -14,6 +17,5 @@
 
     <!-- Content -->
     <ng-content></ng-content>
-
   </mat-sidenav-content>
 </mat-sidenav-container>

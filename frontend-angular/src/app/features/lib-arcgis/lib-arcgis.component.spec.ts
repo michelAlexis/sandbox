@@ -8,9 +8,8 @@ describe('LibArcgisComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LibArcgisComponent ]
-    })
-    .compileComponents();
+      declarations: [LibArcgisComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
