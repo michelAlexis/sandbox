@@ -1,17 +1,16 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { LayoutModule as AppLayoutModule } from './layout/layout.module';
 import { FeaturesModule } from './features/features.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     // Angular
@@ -20,11 +19,10 @@ import { FeaturesModule } from './features/features.module';
 
     // Material
     BrowserAnimationsModule,
-    MatToolbarModule,
 
     // Sandbox
     FeaturesModule,
-    MatButtonModule
+    AppLayoutModule,
   ],
   bootstrap: [AppComponent]
 })
