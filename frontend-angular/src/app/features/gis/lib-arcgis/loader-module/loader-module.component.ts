@@ -69,13 +69,13 @@ export class LoaderModuleComponent implements OnInit {
   }
 
   public async toggleBasemapGallery(): Promise<void> {
-    if(!this.baseampGallery) {
+    if (!this.baseampGallery) {
       const [BasemapGallery] = await loadModules<[esri.BasemapGalleryConstructor]>(['esri/widgets/BasemapGallery']);
-  
+
       this.baseampGallery = new BasemapGallery({
         view: this.mapView,
       });
-  
+
       this.mapView.ui.add(this.baseampGallery, {
         position: 'top-right',
       });

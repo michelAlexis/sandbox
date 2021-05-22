@@ -11,7 +11,7 @@ import { LoaderModuleComponent } from './loader-module.component';
     RouterModule.forChild([{ path: '', component: LoaderModuleComponent }]),
 
     // Material
-    MatButtonModule
+    MatButtonModule,
   ],
   declarations: [LoaderModuleComponent],
   bootstrap: [LoaderModuleComponent],

@@ -12,6 +12,10 @@ import { FeaturesRoutes } from './features.contants';
         path: FeaturesRoutes.gis,
         loadChildren: () => import('./gis/gis.module').then((m) => m.GisModule),
       },
+      {
+        path: FeaturesRoutes.interactive,
+        loadChildren: () => import('./interactive/interactive.module').then((m) => m.InteractiveModule),
+      },
     ]),
   ],
 })

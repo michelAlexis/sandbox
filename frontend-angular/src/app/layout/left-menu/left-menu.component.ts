@@ -1,10 +1,11 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FeaturesRoutes } from 'src/app/features/features.contants';
 import { GisRoutes } from 'src/app/features/gis/gis-routing.module';
+import { InteractiveRoutes } from 'src/app/features/interactive/interactive-routing.module';
 import { MenuItem } from 'src/app/models/layout.model';
 import { LayoutManager } from '../layout.manager';
 
-declare type NavTree = (MenuItem & {children?: MenuItem[]})[]
+declare type NavTree = (MenuItem & { children?: MenuItem[] })[];
 
 @Component({
   selector: 'app-left-menu',
@@ -19,14 +20,19 @@ export class LeftMenuComponent {
 
   public readonly menuTree: NavTree = [
     { label: 'Home', routerLink: FeaturesRoutes.home, icon: 'home' },
-    { label: 'GIS',
+    {
+      label: 'GIS',
       routerLink: FeaturesRoutes.gis,
       icon: 'map',
-      children: [
-        { label: 'Arcgis', routerLink: [FeaturesRoutes.gis, GisRoutes.libArcgis] },
-      ]
-    }
-  ]
+      children: [{ label: 'Arcgis', routerLink: [FeaturesRoutes.gis, GisRoutes.libArcgis] }],
+    },
+    {
+      label: 'Interactive',
+      routerLink: FeaturesRoutes.interactive,
+      icon: 'gesture',
+      children: [{ label: 'Study Kana', routerLink: [FeaturesRoutes.interactive, InteractiveRoutes.kanaStudy] }],
+    },
+  ];
 
   constructor(public layoutManager: LayoutManager) {}
 }

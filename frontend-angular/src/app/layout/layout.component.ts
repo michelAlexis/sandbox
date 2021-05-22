@@ -12,16 +12,13 @@ import { LayoutManager } from './layout.manager';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LayoutComponent implements OnInit {
-
-  @ViewChild(MatSidenav, {static: true}) private sidenav: MatSidenav;
+  @ViewChild(MatSidenav, { static: true }) private sidenav: MatSidenav;
 
   constructor(public layoutManager: LayoutManager) {}
 
   ngOnInit(): void {
-    this.layoutManager.toggleLeftMenu$.pipe(
-      untilDestroyed(this)
-    ).subscribe(() => {
+    this.layoutManager.toggleLeftMenu$.pipe(untilDestroyed(this)).subscribe(() => {
       this.sidenav.toggle();
-    })
+    });
   }
 }
