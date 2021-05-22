@@ -10,7 +10,6 @@ import { LayoutManager } from '../layout.manager';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LeftMenuComponent {
-
   public readonly FeaturesRoutes = FeaturesRoutes;
 
   public readonly GisRoutes = GisRoutes;

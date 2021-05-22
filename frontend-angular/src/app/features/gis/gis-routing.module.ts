@@ -7,7 +7,7 @@ export enum GisRoutes {
 
 const routes: Routes = [
   { path: GisRoutes.libArcgis, loadChildren: () => import('./lib-arcgis/lib-arcgis.module').then((m) => m.LibArcgisModule) },
-  { path: '**', redirectTo: GisRoutes.libArcgis }
+  { path: '**', redirectTo: GisRoutes.libArcgis },
 ];
 
 @NgModule({

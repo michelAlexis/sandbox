@@ -3,12 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { GisRoutingModule } from './gis-routing.module';
 
-
 @NgModule({
   declarations: [],
-  imports: [
-    CommonModule,
-    GisRoutingModule
-  ]
+  imports: [CommonModule, GisRoutingModule],
 })
-export class GisModule { }
+export class GisModule {}
