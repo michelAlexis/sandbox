@@ -1,0 +1,5 @@
+<nav mat-tab-nav-bar [attr.mat-align-tabs]="align">
+  <a *ngFor="let item of items" mat-tab-link [routerLink]="item.route" routerLinkActive #rla="routerLinkActive" [active]="rla.isActive">
+    {{ item.label }}
+  </a>
+</nav>
