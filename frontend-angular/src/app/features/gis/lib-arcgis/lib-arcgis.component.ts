@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MenuItem } from 'src/app/shared/modules/tabs-routing/tabs-routing.model';
+import { MenuItem } from 'src/app/models/layout.model';
 import { ArcgisFeatureRoutes } from './lib-arcgis.contants';
 
 @Component({

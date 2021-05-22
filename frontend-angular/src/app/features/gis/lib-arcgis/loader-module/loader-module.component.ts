@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 import { loadModules } from 'esri-loader';
+import { DEFAULT_BASEMAP, DEFAULT_MAP_CENTER, DEFAULT_MAP_ZOOM, FEATURE_LAYER } from '../lib-arcgis.contants';
 import esri = __esri;
 
 @Component({
@@ -10,10 +11,6 @@ import esri = __esri;
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LoaderModuleComponent implements OnInit {
-  private static readonly LAMBERT_72: esri.SpatialReferenceProperties = {
-    wkid: 31370,
-  };
-
   @ViewChild('mapAnchor', { static: true }) private mapAnchor!: ElementRef;
   @ViewChild('searchAnchor', { static: true })
   private searchAnchor!: ElementRef;
@@ -39,14 +36,10 @@ export class LoaderModuleComponent implements OnInit {
     >(['esri/Map', 'esri/views/MapView', 'esri/geometry/Point', 'esri/geometry/projection']);
 
     this.map = new Map({
-      basemap: 'dark-gray',
+      basemap: DEFAULT_BASEMAP,
     });
 
-    this.center = new Point({
-      x: 184836,
-      y: 130652,
-      spatialReference: LoaderModuleComponent.LAMBERT_72,
-    });
+    this.center = new Point(DEFAULT_MAP_CENTER);
 
     await projection.load();
     this.center = projection.project(this.center, {
@@ -57,15 +50,13 @@ export class LoaderModuleComponent implements OnInit {
       container: this.mapAnchor.nativeElement,
       map: this.map,
       center: this.center,
-      zoom: 8,
+      zoom: DEFAULT_MAP_ZOOM,
     });
   }
 
   public async addFeatureLayer(): Promise<void> {
     const [FeatureLayer] = await loadModules<[esri.FeatureLayerConstructor]>(['esri/layers/FeatureLayer']);
-    const trailheadsLayer = new FeatureLayer({
-      url: 'https://services3.arcgis.com/GVgbJbqm8hXASVYi/arcgis/rest/services/Trailheads_Styled/FeatureServer/0',
-    });
+    const trailheadsLayer = new FeatureLayer(FEATURE_LAYER);
 
     this.map.add(trailheadsLayer);
   }

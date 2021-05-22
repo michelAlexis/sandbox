@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
-import { MenuItem } from './tabs-routing.model';
+import { MenuItem } from '../../../models/layout.model';
 
 @Component({
   selector: 'app-tabs-routing',

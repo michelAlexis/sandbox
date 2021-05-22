@@ -1,4 +1,4 @@
 export interface MenuItem {
   label: string;
-  route: string;
+  route: string | string [];
 }
