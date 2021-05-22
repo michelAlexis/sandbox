@@ -11,12 +11,14 @@ import { MatListModule } from '@angular/material/list';
 import { LayoutComponent } from './layout.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { LeftMenuComponent } from './left-menu/left-menu.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [LayoutComponent, TopBarComponent, LeftMenuComponent],
   imports: [
     // Angular
     CommonModule,
+    RouterModule,
     AngularLayoutModule,
 
     // Material
