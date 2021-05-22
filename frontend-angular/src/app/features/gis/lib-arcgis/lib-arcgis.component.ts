@@ -9,7 +9,7 @@ import { ArcgisFeatureRoutes } from './lib-arcgis.contants';
 })
 export class LibArcgisComponent {
   public menuItems: MenuItem[] = [
-    { route: ArcgisFeatureRoutes.loader, label: 'Loader module' },
-    { route: ArcgisFeatureRoutes.native, label: 'Native module' },
+    { routerLink: ArcgisFeatureRoutes.loader, label: 'Loader module' },
+    { routerLink: ArcgisFeatureRoutes.native, label: 'Native module' },
   ];
 }
