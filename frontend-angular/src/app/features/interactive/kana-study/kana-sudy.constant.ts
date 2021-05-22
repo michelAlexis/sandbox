@@ -4,6 +4,9 @@ export interface Kana {
   romaji: string;
 }
 
+export const ROW_SIZE = 11;
+export const COL_SIZE = 5;
+
 export const ROMANJI_TREE: string[][] = [
   ['a', 'i', 'u', 'e', 'o'],
   ['ka', 'ki', 'ku', 'ke', 'ko'],
@@ -33,6 +36,7 @@ export const HIRAGANA_TREE: string[][] = [
 ];
 
 export const KATAKANA_TREE: string[][] = [
+  ['ア', 'イ', 'ウ', 'エ', 'オ'],
   ['カ', 'キ', 'ク', 'ケ', 'コ'],
   ['サ', 'シ', 'ス', 'セ', 'ソ'],
   ['タ', 'チ', 'ツ', 'テ', 'ト'],
@@ -44,3 +48,17 @@ export const KATAKANA_TREE: string[][] = [
   ['ワ', null, null, null, 'ヲ'],
   [null, null, null, null, 'ン'],
 ];
+
+export function getKana(row: number, col: number): Kana | null {
+  const romaji = ROMANJI_TREE[row][col];
+
+  if (!romaji) {
+    return null;
+  }
+
+  return {
+    romaji,
+    hiragana: HIRAGANA_TREE[row][col],
+    katakana: KATAKANA_TREE[row][col],
+  };
+}

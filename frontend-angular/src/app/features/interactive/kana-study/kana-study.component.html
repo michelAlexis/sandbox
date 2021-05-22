@@ -1,1 +1,16 @@
-<p>kana-study works!</p>
+<div class="main-container">
+    <div class="center-content">
+        <div class="hiragana-tree">
+            <div class="tree-node">
+                <div *ngFor="let i of ROW_SIZE | range" class="kana-row">
+                    <div *ngFor="let j of COL_SIZE | range" class="kana-cell">
+                        <div *ngIf="getKana(i,j) as kana">
+                            <div class="kana">{{kana.hiragana}}</div>
+                            <div class="romaji">{{kana.romaji}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

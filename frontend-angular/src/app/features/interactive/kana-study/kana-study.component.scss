@@ -1,0 +1,32 @@
+:host {
+    .main-container {
+        padding: 5px;
+
+        .center-content {
+            margin: auto;
+            max-width: 80vw;
+        }
+
+        .kana-row {
+            display: flex;
+        }
+
+        .kana-cell {
+            width: 40px;
+            height: 40px;
+            display: inline-block;
+            margin: 6px;
+
+            .kana {
+                font-size: 26px;
+                text-align: center;
+                margin-bottom: 6px;
+            }
+
+            .romaji {
+                text-align: center;
+                
+            }
+        }
+    }
+}
