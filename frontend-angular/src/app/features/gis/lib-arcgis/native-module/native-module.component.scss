@@ -12,4 +12,12 @@
     padding: 0;
     margin: 0;
   }
+
+  .buttons-container {
+    padding: 8px;
+
+    button {
+      margin-right: 4px;
+    }
+  }
 }

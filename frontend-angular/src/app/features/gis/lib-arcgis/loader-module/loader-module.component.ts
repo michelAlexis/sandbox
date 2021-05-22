@@ -69,15 +69,20 @@ export class LoaderModuleComponent implements OnInit {
   }
 
   public async toggleBasemapGallery(): Promise<void> {
-    const [BasemapGallery] = await loadModules<[esri.BasemapGalleryConstructor]>(['esri/widgets/BasemapGallery']);
-
-    this.baseampGallery = new BasemapGallery({
-      view: this.mapView,
-    });
-
-    this.mapView.ui.add(this.baseampGallery, {
-      position: 'top-right',
-    });
+    if(!this.baseampGallery) {
+      const [BasemapGallery] = await loadModules<[esri.BasemapGalleryConstructor]>(['esri/widgets/BasemapGallery']);
+  
+      this.baseampGallery = new BasemapGallery({
+        view: this.mapView,
+      });
+  
+      this.mapView.ui.add(this.baseampGallery, {
+        position: 'top-right',
+      });
+    } else {
+      this.baseampGallery.destroy();
+      this.baseampGallery = null;
+    }
   }
 
   public async toggleSearch(): Promise<void> {

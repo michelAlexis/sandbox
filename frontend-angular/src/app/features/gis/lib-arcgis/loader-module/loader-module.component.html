@@ -1,8 +1,11 @@
-<button (click)="addFeatureLayer()">Test add layer</button>
-<button (click)="moveToCenter()">Move to center</button>
-<button (click)="toggleBasemapGallery()">Add BaseMapGallery inside map</button>
-<button (click)="toggleSearch()">Toggle search</button>
-<button (click)="toggleLayerList()">Toggle layerList</button>
+<div class="buttons-container">
+  <button mat-raised-button (click)="addFeatureLayer()">Add feature layer</button>
+  <button mat-raised-button (click)="moveToCenter()">Center map</button>
+  <button mat-raised-button (click)="toggleBasemapGallery()">Toggle BasemapGallery</button>
+  <button mat-raised-button (click)="toggleSearch()">Toggle Search</button>
+  <button mat-raised-button (click)="toggleLayerList()">Toggle layerList</button>
+</div>
+
 <div #searchAnchor class="search-anchor"></div>
 
 <div class="map-container">

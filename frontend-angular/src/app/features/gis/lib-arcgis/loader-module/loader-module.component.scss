@@ -28,4 +28,12 @@
     height: 100%;
     width: 100%;
   }
+
+  .buttons-container {
+    padding: 8px;
+
+    button {
+      margin-right: 4px;
+    }
+  }
 }
