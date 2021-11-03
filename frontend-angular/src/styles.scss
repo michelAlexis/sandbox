@@ -1,5 +1,9 @@
 // Custom Theming for Angular Material
 @use '~@angular/material' as mat;
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 // For more information: https://material.angular.io/guide/theming
 // Plus imports for other components in your app.
 
