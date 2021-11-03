@@ -2,9 +2,19 @@
     <mat-card>
         <mat-card-title>Recursive form</mat-card-title>
         <div class="grid grid-cols-2">
-            <app-recursive-form-form #formComponent></app-recursive-form-form>
+            <app-recursive-form-form #formComponent class="overflow-auto"></app-recursive-form-form>
             <div class="border-l border-solid border-gray-600 pl-4">
                 <pre>{{formComponent.form.value | json}}</pre>
+            </div>
+        </div>
+    </mat-card>
+
+    <mat-card class="mt-5">
+        <mat-card-title>Recursive form dialog</mat-card-title>
+        <div class="grid grid-cols-2">
+            <app-recursive-form-form-dialog #formDialogComponent class="overflow-auto"></app-recursive-form-form-dialog>
+            <div class="border-l border-solid border-gray-600 pl-4">
+                <pre>{{formDialogComponent.form.value | json}}</pre>
             </div>
         </div>
     </mat-card>

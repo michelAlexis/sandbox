@@ -5,21 +5,16 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { MatTreeModule } from '@angular/material/tree';
-import { MatDialogModule } from '@angular/material/dialog';
 import { RouterModule } from '@angular/router';
-import { FormDialogComponent } from './form-dialog/form.component';
 import { FormComponent } from './form/form.component';
 import { RecursiveFormComponent } from './recursive-form.component';
-import { DialogComponent } from './form-dialog/dialog/dialog.component';
 
 
 
 @NgModule({
   declarations: [
     RecursiveFormComponent,
-    FormComponent,
-    FormDialogComponent,
-    DialogComponent,
+    FormComponent
   ],
   imports: [
     // Angular
@@ -33,7 +28,6 @@ import { DialogComponent } from './form-dialog/dialog/dialog.component';
     MatInputModule,
     MatTreeModule,
     MatButtonModule,
-    MatDialogModule,
   ]
 })
 export class RecursiveFormModule { }

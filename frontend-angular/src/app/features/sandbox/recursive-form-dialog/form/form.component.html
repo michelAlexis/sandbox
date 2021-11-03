@@ -1,0 +1,19 @@
+<form [formGroup]="form">
+    <div class="flex">
+        <!-- Name -->
+        <mat-form-field class="mr-3 w-100">
+            <mat-label>Name</mat-label>
+            <input matInput type="text" [formControlName]="FormControls.name">
+        </mat-form-field>
+        <!-- Add -->
+        <div class="mr-3"><button mat-raised-button color="primary" (click)="addChild()">Add box</button></div>
+        <div class="mr-3"><button mat-raised-button color="warn" (click)="remove.emit()">Remove box</button></div>
+    </div>
+
+    <!-- Children -->
+    <ng-container [formArrayName]="FormControls.children">
+        <div *ngFor="let ctrl of childrenCtrl.controls; index as i" class="ml-12">
+            <app-recursive-form-form [formControlName]="i" (remove)="removeBox(i)"></app-recursive-form-form>
+        </div>
+    </ng-container>
+</form>

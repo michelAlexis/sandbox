@@ -1,0 +1,11 @@
+<div class="p-20">
+    <mat-card>
+        <mat-card-title>Recursive form</mat-card-title>
+        <div class="grid grid-cols-2">
+            <app-recursive-form-form #formComponent class="overflow-auto"></app-recursive-form-form>
+            <div class="border-l border-solid border-gray-600 pl-4">
+                <pre>{{formComponent.form.value | json}}</pre>
+            </div>
+        </div>
+    </mat-card>
+</div>
