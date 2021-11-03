@@ -2,6 +2,7 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FeaturesRoutes } from 'src/app/features/features.contants';
 import { GisRoutes } from 'src/app/features/gis/gis-routing.module';
 import { InteractiveRoutes } from 'src/app/features/interactive/interactive-routing.module';
+import { SandboxRoutes } from 'src/app/features/sandbox/sandbox-routing.module';
 import { MenuItem } from 'src/app/models/layout.model';
 import { LayoutManager } from '../layout.manager';
 
@@ -32,6 +33,14 @@ export class LeftMenuComponent {
       icon: 'gesture',
       children: [{ label: 'Study Kana', routerLink: [FeaturesRoutes.interactive, InteractiveRoutes.kanaStudy] }],
     },
+    {
+      label: 'Sandbox',
+      routerLink: FeaturesRoutes.sandbox,
+      icon: 'work',
+      children:[
+        { label: 'Recursive form', routerLink: [FeaturesRoutes.sandbox, SandboxRoutes.recursiveForm] }
+      ]
+    }
   ];
 
   constructor(public layoutManager: LayoutManager) {}
