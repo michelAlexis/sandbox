@@ -18,4 +18,14 @@
             </div>
         </div>
     </mat-card>
+
+    <mat-card class="mt-5">
+        <mat-card-title>Recursive form dialog NgModel</mat-card-title>
+        <div class="grid grid-cols-2">
+            <app-recursive-form-form-dialog-model #formDialogModelComponent class="overflow-auto"></app-recursive-form-form-dialog-model>
+            <div class="border-l border-solid border-gray-600 pl-4">
+                <pre>{{formDialogModelComponent.box | json}}</pre>
+            </div>
+        </div>
+    </mat-card>
 </div>

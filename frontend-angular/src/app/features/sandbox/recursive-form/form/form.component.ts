@@ -43,7 +43,6 @@ export class FormComponent implements OnInit, ControlValueAccessor {
     this.form = this.buildBoxForm();
     
     this.form.valueChanges.pipe(untilDestroyed(this)).subscribe(v => {
-      console.log('Value changed');
       if(this._onChange) {
         this._onChange(v);
       }

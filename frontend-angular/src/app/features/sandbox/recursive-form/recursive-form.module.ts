@@ -11,6 +11,7 @@ import { FormDialogComponent } from './form-dialog/form.component';
 import { FormComponent } from './form/form.component';
 import { RecursiveFormComponent } from './recursive-form.component';
 import { DialogComponent } from './form-dialog/dialog/dialog.component';
+import { FormDialogNgModelComponent } from './form-dialog-model/form.component';
 
 
 
@@ -20,6 +21,7 @@ import { DialogComponent } from './form-dialog/dialog/dialog.component';
     FormComponent,
     FormDialogComponent,
     DialogComponent,
+    FormDialogNgModelComponent,
   ],
   imports: [
     // Angular

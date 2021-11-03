@@ -1,0 +1,20 @@
+<div>
+    <div class="flex mb-4">
+        <!-- Name -->
+        <div class="mr-3 w-100">
+            <span>Name: {{box?.name}}</span>
+        </div>
+        <!-- Add -->
+        <div class="mr-3"><button mat-raised-button color="primary" (click)="addChild()">Add box</button></div>
+        <div class="mr-3"><button mat-raised-button color="primary" (click)="editBox()">Edit box</button></div>
+        <div class="mr-3"><button mat-raised-button color="warn" (click)="remove.emit()">Remove box</button></div>
+    </div>
+
+    <!-- Children -->
+    <ng-container *ngIf="box?.children?.length > 0">
+        <div *ngFor="let ctrl of box.children; index as i" class="ml-12">
+            <app-recursive-form-form-dialog-model [(ngModel)]="box.children[i]" (remove)="removeBox(i)"></app-recursive-form-form-dialog-model>
+        </div>
+    </ng-container>
+
+</div>
